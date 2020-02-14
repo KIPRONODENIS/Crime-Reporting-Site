@@ -22,7 +22,8 @@ Route::get('register',function(){
   return view('auth.register');
 })->name('register');
 //Route to report a crime
-Route::get('/report','ReportController@index')->name('report')->middleware('authnfige/app');
+Route::get('/report','ReportController@index')->name('report')->middleware('auth');
+
 //Authentication routes
 Auth::routes();
 

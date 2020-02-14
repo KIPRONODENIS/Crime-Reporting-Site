@@ -5,11 +5,11 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -42,5 +42,8 @@ class User extends Authenticatable
    public function crimes() {
      return $this->hasMany(\App\Crime::class);
    }
-
+// the police station he belonds as an officer
+  public function station() {
+    return $this->belongsTo(\App\PoliceStation::class,'police_station_id');
+  }
 }

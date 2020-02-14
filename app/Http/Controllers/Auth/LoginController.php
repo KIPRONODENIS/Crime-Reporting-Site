@@ -38,11 +38,13 @@ class LoginController extends Controller
     }
 
     public function showLoginForm(){
-    //  session()->put('previousUrl',url()->previous());
+     session()->put('previousUrl',url()->previous());
       return view('auth.login');
     }
 
-    // public function redirectTo(){
-    //   return str_replace(url('/'),'',session()->get('previousUrl'));
-    // }
+    public function redirectTo(){
+
+      return str_replace(url('/'),'',session()->get('previousUrl'));
+
+    }
 }
