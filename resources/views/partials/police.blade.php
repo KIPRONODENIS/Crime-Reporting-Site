@@ -1,13 +1,13 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
+<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-11">
             <div class="card">
                 <div class="card-header">Dashboard
  <div class="d-flex jusfify-around">
    <a href="/home}}" class="bg-white text-gray-700  rounded shadow hover:bg-transparent  focus:bg-gray-100 py-3 m-2 no-underline nav-link">Dashboard</a>
-   <a href="/profile/{{Auth::id()}}" class="bg-blue-200 text-gray-700 rounded shadow hover:bg-transparent  focus:bg-gray-100 py-3 m-2 no-underline nav-link">Profile</a>
+   <a href="/profile}}" class="bg-blue-200 text-gray-700 rounded shadow hover:bg-transparent  focus:bg-gray-100 py-3 m-2 no-underline nav-link">Profile</a>
  </div>
 
 

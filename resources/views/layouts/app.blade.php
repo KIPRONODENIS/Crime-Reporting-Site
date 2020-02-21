@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app px-4">
@@ -61,6 +62,8 @@
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                               @csrf
                           </form>
+
+                          <a class="dropdown-item" href="/profile">Profile</a>
                       </div>
                   </li>
               @endguest

@@ -13,7 +13,7 @@
 
 Route::get('/',function(){
   return view('welcome');
-});
+})->middleware('guest');
 //Route to show login form
 Route::get('/login','Auth.LoginController@showLoginForm')->name('login');
 //Route to register
@@ -23,7 +23,11 @@ Route::get('register',function(){
 })->name('register');
 //Route to report a crime
 Route::get('/report','ReportController@index')->name('report')->middleware('auth');
+Route::post('/report','ReportController@store')->name('crime.create')->middleware('auth');
+//profile route
 
+
+Route::get('/profile','UserController@profile');
 //Authentication routes
 Auth::routes();
 
