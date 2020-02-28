@@ -3,7 +3,7 @@
 @section('content')
 <header>
   <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" >
     <source src="video/animation.mp4" type="video/mp4">
   </video>
   <div class="container h-100">
@@ -28,6 +28,7 @@
           <p>The following people have been identified a the most wanted criminals and therefore the
           National police service wishes to inform the public to submit their report here should they see any of the following. Rewards will be offered for any who find...</p>
          <div class="h-10"></div>
+         
        <!-- Team -->
 <section id="team" class="pb-5 ">
     <section class="our-webcoderskull padding-lg">
@@ -237,5 +238,8 @@
     </div>
 
   </div>
+</section>
+<section id="wanted">
+  
 </section>
 @endsection
