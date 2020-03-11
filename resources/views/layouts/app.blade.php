@@ -71,33 +71,33 @@ header .overlay {
 
 .our-webcoderskull{
 
-  
+
 }
-.our-webcoderskull .cnt-block{ 
-   float:left; 
-   width:100%; 
-   background:#fff; 
-   padding:30px 20px; 
-   text-align:center; 
+.our-webcoderskull .cnt-block{
+   float:left;
+   width:100%;
+   background:#fff;
+   padding:30px 20px;
+   text-align:center;
    border:2px solid #d5d5d5;
    margin: 0 0 28px;
 }
 .our-webcoderskull .cnt-block figure{
-   width:148px; 
-   height:148px; 
-   border-radius:100%; 
+   width:148px;
+   height:148px;
+   border-radius:100%;
    display:inline-block;
    margin-bottom: 15px;
 }
-.our-webcoderskull .cnt-block img{ 
-   width:148px; 
-   height:148px; 
-   border-radius:100%; 
+.our-webcoderskull .cnt-block img{
+   width:148px;
+   height:148px;
+   border-radius:100%;
 }
-.our-webcoderskull .cnt-block h3{ 
-   color:#2a2a2a; 
-   font-size:20px; 
-   font-weight:500; 
+.our-webcoderskull .cnt-block h3{
+   color:#2a2a2a;
+   font-size:20px;
+   font-weight:500;
    padding:6px 0;
    text-transform:uppercase;
 }
@@ -108,25 +108,25 @@ header .overlay {
 .our-webcoderskull .cnt-block h3 a:hover{
   color:#337ab7;
 }
-.our-webcoderskull .cnt-block p{ 
-   color:#2a2a2a; 
-   font-size:13px; 
-   line-height:20px; 
+.our-webcoderskull .cnt-block p{
+   color:#2a2a2a;
+   font-size:13px;
+   line-height:20px;
    font-weight:400;
 }
 .our-webcoderskull .cnt-block .follow-us{
   margin:20px 0 0;
 }
-.our-webcoderskull .cnt-block .follow-us li{ 
-    display:inline-block; 
-  width:auto; 
+.our-webcoderskull .cnt-block .follow-us li{
+    display:inline-block;
+  width:auto;
   margin:0 5px;
 }
-.our-webcoderskull .cnt-block .follow-us li .fa{ 
-   font-size:24px; 
+.our-webcoderskull .cnt-block .follow-us li .fa{
+   font-size:24px;
    color:#767676;
 }
-.our-webcoderskull .cnt-block .follow-us li .fa:hover{ 
+.our-webcoderskull .cnt-block .follow-us li .fa:hover{
    color:#025a8e;
 }
 
@@ -136,14 +136,17 @@ header .overlay {
 <body>
     <div id="app px-4">
       <nav class="navbar navbar-expand-lg shadow  text-white py-3" style=" background: linear-gradient(to right, #fc4a1a, #f7b733);">
-        <a class="navbar-brand text-xl" href="/">Crime Reporting Sytem</a>
+        <a class="navbar-brand text-xl text-white" href="/">Crime Reporting Sytem</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/home">Dashboard <span class="sr-only">(current)</span></a>
             </li>
 
           </ul>

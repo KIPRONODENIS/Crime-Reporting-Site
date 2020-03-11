@@ -11,9 +11,20 @@
 |
 */
 
-Route::get('/',function(){
-  return view('welcome');
-})->middleware('guest');
+Route::get('/','WelcomeController@index');
+
+Route::get('/admin','AdminController@index')->name('admin.home');
+Route::get('/admin/stations','AdminController@stations')->name('admin.stations');
+Route::get('/admin/counties','AdminController@counties')->name('admin.counties');
+Route::get('/admin/subcounties','AdminController@subcounties')->name('admin.subcounties');
+Route::get('/admin/wanted','AdminController@wanted')->name('admin.wanted');
+
+Route::get('/admin/police','AdminController@police')->name('admin.police');
+
+Route::get('/admin/missing','AdminController@missing')->name('admin.missing');
+
+
+
 //Route to show login form
 Route::get('/login','Auth.LoginController@showLoginForm')->name('login');
 //Route to register

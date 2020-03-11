@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container " style="height:100% !important">
     <div class="row justify-content-center">
-        <div class="col-md-11">
-            <div class="card">
+        <div class="col-md-11 ">
+            <div class="card w-full">
                 <div class="card-header">Dashboard
 
 
@@ -11,17 +11,16 @@
 
                 </div>
 
-                <div class="card-body">
+                <div class="card-body  " >
 <h1 class="h4 uppercase shadow border-b mb-4 p-3 text-gray-700">Your Reported Cases</h1>
-<table class="table table-responsive table-striped ">
+<table class="table table-responsive table-striped w-full  ">
  <thead class="bg-primary text-white">
 <tr>
-<td>Title</td>
-<td>Type</td>
-<td>Police Station</td>
-<td>Area</td>
-<td>Status</td>
-<td>Action</td>
+<td class="w-1/4">Title</td>
+<td class="w-1/4">Type</td>
+<td class="w-1/4">Police Station</td>
+<td class="w-1/4">Area</td>
+<td class="w-1/4">Status</td>
 </tr>
  </thead>
 
@@ -33,7 +32,7 @@
 <td>{{$crime->station->name}}</td>
 <td>{{$crime->area}}</td>
 <td><span class="badge {{$crime->status=="pending"?'badge-info':'badge-success'}} text-md p-2">{{$crime->status}}<span></td>
-<td>Action<span class="fas fa-edit"></span></td>
+
 </tr>
 @endforeach
 </tbody>

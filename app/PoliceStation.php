@@ -17,4 +17,8 @@ class PoliceStation extends Model
     return $this->hasMany(\App\Crime::class,'police_station_id');
   }
 
+    public function subcounty() {
+    return $this->belongsTo(\App\SubCounty::class,'sub_county_id');
+  }
+
 }
