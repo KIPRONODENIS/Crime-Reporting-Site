@@ -29,9 +29,35 @@ class HomeController extends Controller
 
        if(\Auth::user()->hasRole('police')) {
          $crimes=\Auth::user()->station()->with('crimes')->get()->first()->crimes;
-    
-         return view('partials.police',compact('crimes'));
+
+         $wantedcases=\Auth::user()->station->wantedcases;
+         $missingcases=\Auth::user()->station->missingcases;
+
+
+         return view('partials.police',compact('crimes','wantedcases','missingcases'));
        }
+
+           if(\Auth::user()->hasRole('admin')) {
+
+       return redirect()->route('admin.home');
+       }
+
+       
         return view('home',compact('crimes'));
     }
+
+
+    public function wanted(){
+
+    $wanted=\Auth::user()->station->wanted;
+   return view('police.wanted',compact('wanted'));
+    } 
+
+       public function missing(){
+
+    $MissingPersons=\Auth::user()->station->missing;
+   return view('police.missing',compact('MissingPersons'));
+    }
+
+
 }

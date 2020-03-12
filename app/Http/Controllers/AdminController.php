@@ -9,10 +9,19 @@ use App\SubCounty;
 use App\User;
 use App\WantedPerson;
 use App\MissingPerson;
+use App\Crime;
+
 class AdminController extends Controller
 {
     public function index() {
-    	return view('admin.index');
+        $users=User::count();
+        $stations=PoliceStation::count();
+        $counties=County::count();
+        $subcounties=SubCounty::count();
+        $wanted=WantedPerson::count();
+        $lostpersons=MissingPerson::count();
+        $reportedcases=Crime::count();
+    	return view('admin.index',compact('stations','counties','subcounties','wanted','lostpersons','reportedcases','users'));
     }
 
         public function stations() {

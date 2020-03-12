@@ -48,8 +48,8 @@
             <h3 ><a href="#" class="text-green-500 bold">Reward: Kshs. <span class="font-bold text-success">{{$wanted->reward}}</span></a></h3>
             <div class='spacer h-10'></div>
            <div class="mx-3 flex justify-between">
-             <a href="#" class="text-blue-500">Details</a>
-             <a href="#" class="btn btn-success border border-1 border-solig-red">Report</a>
+             <a href="{{route('wanted.show',$wanted->id)}}" class="text-blue-500">Details</a>
+             <a href="{{route('wanted.report',$wanted->id)}}" class="btn btn-success border border-1 border-solig-red">Report</a>
            </div>
           </div>
       </li>
@@ -85,8 +85,8 @@
             <h3 >Got Lost:<a href="http://www.webcoderskull.com/" class="text-green-500 bold">{{$person->time->diffForHumans()}} </a></h3>
             <div class='spacer h-5'></div>
            <div class="mx-3 flex justify-between my-2 mb-5">
-             <a href="#" class="text-blue-500">Details</a>
-             <a href="#" class="btn btn-success border border-1 border-solig-red mb-2">Report</a>
+             <a href="{{route('missing.show',$person->id)}}" class="text-blue-500">Details</a>
+             <a href="{{route('missing.report',$person->id)}}" class="btn btn-success border border-1 border-solig-red mb-2">Report</a>
            </div>
           </div>
       </li>

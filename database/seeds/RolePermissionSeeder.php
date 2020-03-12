@@ -27,10 +27,11 @@ Permission::create(['name' => 'delete case']);
 
 //role creation
 $role = Role::create(['name' => 'police']);
+$role = Role::create(['name' => 'admin']);
 $role->givePermissionTo(['cancel case','update case','delete case']);
 
 //ASSIGN SOME USERS RoleS
-User::find(2)->assignRole('police');
-
+User::find(3)->assignRole('police');
+User::find(1)->assignRole('admin');
     }
 }

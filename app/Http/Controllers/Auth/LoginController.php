@@ -44,6 +44,7 @@ class LoginController extends Controller
 
     public function redirectTo(){
 
+
       return str_replace(url('/'),'',session()->get('previousUrl'));
 
     }

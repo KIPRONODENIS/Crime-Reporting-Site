@@ -16,20 +16,20 @@
 <table class="table table-responsive table-striped w-full  ">
  <thead class="bg-primary text-white">
 <tr>
-<td class="w-1/4">Title</td>
-<td class="w-1/4">Type</td>
-<td class="w-1/4">Police Station</td>
-<td class="w-1/4">Area</td>
-<td class="w-1/4">Status</td>
+<td>Title</td>
+<td>Type</td>
+<td>Police Station</td>
+<td>Area</td>
+<td>Status</td>
 </tr>
  </thead>
 
  <tbody>
    @foreach($crimes as $crime)
 <tr>
-<td>{{$crime->title}}</td>
+<td class="w-50">{{$crime->title}}</td>
 <td>{{$crime->type}}</td>
-<td>{{$crime->station->name}}</td>
+<td class="w-50">{{$crime->station->name}}</td>
 <td>{{$crime->area}}</td>
 <td><span class="badge {{$crime->status=="pending"?'badge-info':'badge-success'}} text-md p-2">{{$crime->status}}<span></td>
 
@@ -38,6 +38,9 @@
 </tbody>
 </table>
                 </div>
+
+
+
             </div>
         </div>
     </div>
