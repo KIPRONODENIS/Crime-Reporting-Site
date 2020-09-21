@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
      <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
     <style type="text/css">
       header {
@@ -131,8 +131,10 @@ header .overlay {
 }
 
     </style>
+    <link href="{{ asset('appb.css') }}" rel="stylesheet">
 
-</head>
+ <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+ </head>
 <body>
     <div id="app px-4">
       <nav class="navbar navbar-expand-lg shadow  text-white py-3" style=" background: linear-gradient(to right, #fc4a1a, #f7b733);">

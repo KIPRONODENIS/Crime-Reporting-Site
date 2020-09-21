@@ -49,6 +49,24 @@ class CrimeController extends Controller
         //
     }
 
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Crime  $crime
+     * @return \Illuminate\Http\Response
+     */
+    public function UpdateStatus(Request $request,Crime $crime)
+    {
+
+        $crime->update([
+'status'=>$request->status
+        ]);
+
+  session()->flash('success','Update successful');
+        return redirect()->back();
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

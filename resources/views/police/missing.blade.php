@@ -6,11 +6,10 @@
 
                 <div class="card-body">
 <h1 class="h4 my-2"> Missing Persons
-
                         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary float-right mb-4" data-toggle="modal" data-target="#exampleModal">
+<a href="{{route('police.missing.create')}}" class="btn btn-primary float-right mb-4" >
   Add New
-</button>
+</a>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

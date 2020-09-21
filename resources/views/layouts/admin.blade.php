@@ -33,22 +33,22 @@
 </head>
 
 <body>
-
+ @php  $active=session('active') ?? 'dashboard' @endphp
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-grey-500 border-right" id="sidebar-wrapper">
       <div class="sidebar-heading bg-primary text-white">Crime Report admin </div>
       <div class="list-group list-group-flush">
-        <a href="{{route('admin.home')}}" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="{{route('admin.stations')}}" class="list-group-item list-group-item-action bg-light">Police Station</a>
-        <a href="{{route('admin.counties')}}" class="list-group-item list-group-item-action bg-light">Counties</a>
-        <a href="{{route('admin.subcounties')}}" class="list-group-item list-group-item-action bg-light">Subcounties</a>
-        <a href="{{route('admin.police')}}" class="list-group-item list-group-item-action bg-light">Police Officers</a>
+        <a href="{{route('admin.home')}}" class="list-group-item list-group-item-action bg-light {{$active=='dashboard' ? 'bg-orange-600  text-primary':''}}">Dashboard</a>
+        <a href="{{route('admin.stations')}}" class="list-group-item list-group-item-action bg-light {{$active=='station' ? 'bg-orange-600  text-primary':''}}">Police Station</a>
+        <a href="{{route('admin.counties')}}" class="list-group-item list-group-item-action bg-light {{$active=='county' ? 'bg-orange-600  text-primary':''}}">Counties</a>
+        <a href="{{route('admin.subcounties')}}" class="list-group-item list-group-item-action bg-light  {{$active=='subcounty' ? 'bg-orange-600  text-primary':''}}">Subcounties</a>
+        <a href="{{route('admin.police')}}" class="list-group-item list-group-item-action bg-light {{$active=='police' ? 'bg-orange-600  text-primary':''}}">Police Officers</a>
 
-         <a href="{{route('admin.wanted')}}" class="list-group-item list-group-item-action bg-light">Wanted Persons</a>
+         <a href="{{route('admin.wanted')}}" class="list-group-item list-group-item-action bg-light {{$active=='wanted' ? 'bg-orange-600  text-primary':''}}">Wanted Persons</a>
 
-           <a href="{{route('admin.missing')}}" class="list-group-item list-group-item-action bg-light">Lost Persons</a>
+           <a href="{{route('admin.missing')}}" class="list-group-item list-group-item-action bg-light {{$active=='missing' ? 'bg-orange-600  text-primary':''}}">Lost Persons</a>
        
       </div>
     </div>

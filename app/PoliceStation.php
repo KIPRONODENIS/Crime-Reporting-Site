@@ -8,6 +8,8 @@ class PoliceStation extends Model
 {
     //police offierts
 
+  protected $guarded=[];
+
     public function officers() {
       return $this->hasMany(\App\User::class,'police_station_id');
     }

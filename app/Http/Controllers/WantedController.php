@@ -47,11 +47,61 @@ return redirect()->back();
 ]);
 
 
-session()->flash('success',"Report has beeen Successfully Sent");
+session()->flash('success',"Report has been Successfully Sent");
 
 return redirect()->back();
    
      }
+
+    }
+
+public function UpdateStatus(Request $request, Incident $wanted) {
+
+
+      $wanted->update([
+   'status'=>$request->status
+      ]);
+
+session()->flash('success',"Status update successful!!");
+
+return redirect()->back();
+    }
+
+
+
+
+    public function create(){
+
+      return view('wanted.new');
+    }
+
+    public function newWanted(Request $request) {
+
+$request->validate([
+ 'name'=>'required|min:2',
+ 'crime'=>'required',
+ 
+ 'image'=>'required',
+ 'reward'=>'required',
+ 'description'=>'required'
+]);
+
+      WantedPerson::create([
+     "crime"=>$request->crime,
+     "reward"=>$request->reward,
+     'name'=>$request->name,
+     'image'=>$request->image->store('images',['disk'=>'public']),
+     "description"=>$request->description
+
+      ]);
+
+
+
+
+session()->flash('success',"Criminal Successfully posted!!");
+
+return redirect()->back();
+
 
     }
 }

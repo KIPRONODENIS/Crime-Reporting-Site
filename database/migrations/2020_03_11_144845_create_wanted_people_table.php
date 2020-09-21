@@ -19,6 +19,7 @@ class CreateWantedPeopleTable extends Migration
             $table->string('name');
             $table->string('image');
             $table->integer('reward');
+            $table->string('status')->default('pending');
             $table->bigInteger('police_station_id')->default(1);
             $table->text('description');
             $table->timestamps();

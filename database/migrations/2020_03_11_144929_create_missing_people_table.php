@@ -19,6 +19,7 @@ class CreateMissingPeopleTable extends Migration
             $table->string('name');
             $table->string('location');
             $table->string('image');
+            $table->string('status')->default('pending');
             $table->text('description');
             $table->bigInteger('police_station_id');
             $table->datetime('date_lost');

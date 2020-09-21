@@ -2,6 +2,9 @@
 
 @section('content')
    <div class="container m-4">
+        @if(session()->has('success'))
+<div class="alert alert-success">{{session('success')}}</div>
+    @endif
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
@@ -33,8 +36,8 @@
                         <td>{{$person->reward}}</td>
                         <td>{{$person->station->name}}</td>
                         <td>
-              <a class="add" title="Add" data-toggle="tooltip"><i class="btn btn-primary">edit</i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="btn btn-danger">Delete</i></a>
+                         <a class="add" title="Add" data-toggle="tooltip" href="{{route('admin.wanted.view',$person->id)}}"><i class="btn btn-success">view</i></a>
+                                <a class="delete" title="delete" data-toggle="tooltip"  href="{{route('wanted.delete',$person->id)}}"><i class="btn btn-danger">Delete</i></a>
                        <!--      <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a> -->
                         </td>
                     </tr>
